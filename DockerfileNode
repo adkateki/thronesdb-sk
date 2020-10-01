@@ -1,0 +1,7 @@
+FROM composer as php-builder
+COPY . /app
+RUN composer install
+
+FROM node:10.22.1-stretch as node-builder
+COPY --from=php-builder /app /app
+
