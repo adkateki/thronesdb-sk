@@ -33,3 +33,7 @@
 
 #ignore output dir of HTMLPurifier
 /src/URI
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###

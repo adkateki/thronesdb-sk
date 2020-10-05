@@ -116,11 +116,21 @@ exports.default = series(
   clean,
   series(
     buildCss,
+    buildVendorJs,
     buildAppJs,
     buildTranslationsJs,
-    buildVendorJs,
     copyPageSpecificJs,
     copyLanguagesImage
   )
 )
+
+exports.vendor = buildVendorJs
+
+/*exports.default = series(
+  clean,
+  series(
+    buildCss,
+    buildVendorJs
+  )
+)*/
 exports.clean = clean

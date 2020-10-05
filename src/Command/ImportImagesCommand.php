@@ -40,15 +40,22 @@ class ImportImagesCommand extends Command
             $cgdbId = $card->getPack()->getCgdbId();
 
             if (empty($cgdbId)) {
-                $output->writeln(sprintf('Skip %s because its cgdb_id is not defined', $card->getPack()->getName()));
-                continue;
+                $cardCode = $card->getCode();
+                if (empty($cardCode)) {
+                   $output->writeln(sprintf('Skip %s because its cgdb_id is not defined', $card->getPack()->getName()));
+                   continue;
+		}
+                $url = sprintf('http://skthrone.ams3.cdn.digitaloceanspaces.com/public/%d.png', $cardCode);
+            }
+            else{
+		if ($cgdbId === 1 && $position >= 198 && $position <= 205) {
+		    $position = $position . 'B';
+		}
+
+		$url = sprintf('http://lcg-cdn.fantasyflightgames.com/got2nd/GT%02d_%s.jpg', $cgdbId, $position);
+
             }
 
-            if ($cgdbId === 1 && $position >= 198 && $position <= 205) {
-                $position = $position . 'B';
-            }
-
-            $url = sprintf('http://lcg-cdn.fantasyflightgames.com/got2nd/GT%02d_%s.jpg', $cgdbId, $position);
 
             $response = $client->request('GET', $url);
 
