@@ -2,6 +2,7 @@
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache
 /phpcs.xml
+/var/
 ###< squizlabs/php_codesniffer ###
 
 ###> symfony/phpunit-bridge ###
