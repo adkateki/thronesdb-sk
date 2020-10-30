@@ -275,6 +275,21 @@
     var joust_pods_map = get_pods_map(joust_pods);
 
     /*
+     * Checks a given card's text has the "Limited" keyword.
+     * @param {Object} card
+     * @param {String} limited The i18n'ed word "Shadow".
+     * @returns {boolean}
+     */
+    var card_has_limited_keyword = function(card, limited) {
+        // "Shadow (<cost>).", with <cost> being either digits or the letter "X"
+        var regex = new RegExp(limited + '\.');
+        var text = card.text || '';
+        // check if first line in the card text has that keyword.
+        var textLines = text.split("\n");
+        return regex.test(textLines[0]);
+    };
+
+    /*
      * Checks a given card's text has the "Shadow" keyword.
      * @param {Object} card
      * @param {String} shadow The i18n'ed word "Shadow".
@@ -1229,6 +1244,22 @@
             }
             return true;
         };
+        var validate_moonsingers = function() {
+            var i, n;
+            var locations = deck.get_cards(null, {type_code: 'location'});
+            var limitedLoc= 0;
+
+            for (i = 0, n = locations.length; i < n; i++) {
+                if (card_has_limited_keyword(locations[i], Translator.trans('keyword.limited.name'))) {
+                    limitedLoc++;
+                }
+                
+            }
+            if (limitedLoc > 5){
+                return false;
+	    }
+            return true;
+        };
         var validate_dark_wings_dark_words = function() {
             var i, n;
             var names = [];
@@ -1318,6 +1349,8 @@
                 return validate_valyrian_steel();
             case '16028':
                 return validate_dark_wings_dark_words();
+            case '50041':
+		return validate_moonsingers();
         }
         return true;
     };
