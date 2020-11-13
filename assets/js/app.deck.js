@@ -1251,7 +1251,7 @@
 
             for (i = 0, n = locations.length; i < n; i++) {
                 if (card_has_limited_keyword(locations[i], Translator.trans('keyword.limited.name'))) {
-                    limitedLoc++;
+                    limitedLoc+=locations[i].indeck;
                 }
                 
             }
