@@ -1,4 +1,4 @@
-FROM composer as php-builder
+FROM composer:1.10.17 as php-builder
 COPY . /app
 WORKDIR /app
 RUN composer install

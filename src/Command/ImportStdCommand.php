@@ -232,6 +232,9 @@ class ImportStdCommand extends Command
                     if (array_key_exists('errata', $item) && $item['errata']) {
                         $data['text'] .= "\n<em>Errata'd.</em>";
                     }
+                    if (array_key_exists('imageUrl', $item)) {
+                        $data['image_url'] = $item['imageUrl'];
+                    }
                     $data['traits'] = $item['traits'] ? implode('. ', $item['traits']) . '.' : '';
                     $data['type_code'] = $item['type'];
                     $data['strength'] = null;
@@ -254,6 +257,19 @@ class ImportStdCommand extends Command
 
                     $position++;
 
+                    $optionalProps = [
+                        'designer',
+                        'illustrator',
+                        'traits',
+                        'cost',
+                        'octgn_id',
+
+                    ];
+
+                    if (array_key_exists('image_url', $data)) {
+                        $optionalProps[] = 'image_url';
+                    }
+
                     $entity = $this->getEntityFromData(
                         Card::class,
                         $data,
@@ -274,13 +290,7 @@ class ImportStdCommand extends Command
                             'pack_code',
                             'type_code'
                         ],
-                        [
-                            'designer',
-                            'illustrator',
-                            'traits',
-                            'cost',
-                            'octgn_id'
-                        ],
+                        $optionalProps,
                         $output
                     );
                     if ($entity) {
