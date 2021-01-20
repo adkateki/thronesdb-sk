@@ -29,147 +29,79 @@
         layout_data = {},
         // Restricted/Banned Lists issued by The Conclave (v2.0)
         joust_restricted_list = [
-            "02034", // Crown of Gold (TRtW)
-            "02065", // Halder (NMG)
-            "02091", // Raider from Pyke (CoW)
-            "02092", // Iron Mines (CoW)
-            "02102", // Ward (TS)
-            "06004", // All Men Are Fools (AMAF)
-            "06038", // Great Hall (GtR)
-            "06039", // "The Dornishman's Wife" (GtR)
-            "06040", // The Annals of Castle Black (GtR)
-            "06098", // Flea Bottom (OR)
-            "08080", // The King in the North (FotOG)
-            "08082", // I Am No One (TFM)
-            "09001", // Mace Tyrell (HoT)
-            "09037", // Qotho (HoT)
-            "09051", // Trade Routes (HoT)
-            "10045", // The Wars To Come (SoD)
-            "10048", // Forced March (SoD)
-            "10050", // Breaking Ties (SoD)
-            "11012", // Nighttime Marauders (TSC)
-            "11021", // Wyman Manderly (TMoW)
-            "11033", // Hizdahr zo Loraq (TMoW)
-            "11034", // Meereen (TMoW)
-            "11051", // Drowned God Fanatic (SoKL)
-            "11061", // Meera Reed (MoD)
-            "11114", // Gifts for the Widow (DitD)
-            "12002", // Euron Crow's Eye (KotI)
-            "12029", // Desert Raider (KotI)
-            "12046", // We Take Westeros! (KotI)
-            "12047", // Return to the Fields (KotI)
-            "13044", // Unexpected Guile (PoS)
-            "13085", // Yoren (TB)
-            "13086", // Bound for the Wall (TB)
-            "13103", // The Queen's Retinue (LMHR)
-            "14008", // Selyse Baratheon (FotS)
-            "15030", // The Red Keep (DotE)
-            "15033", // Clydas (DotE)
-            "15045", // Bribery (DotE)
-            "16027", // Aloof and Apart (TTWDFL)
+	      "02065", // Halder (NMG)
+	      "02091", // Raider from Pyke (CoW)
+	      "02092", // Iron Mines (CoW)
+	      "02102", // Ward (TS)
+	      "04085", // Craster (GoH)
+	      "06004", // All Men Are Fools (AMAF)
+	      "06011", // Drowned Disciple (AMAF)
+	      "06038", // Great Hall (GtR)
+	      "06098", // Flea Bottom (OR)
+	      "08080", // The King in the North (FotOG)
+	      "08082", // I Am No One (TFM)
+	      "09001", // Mace Tyrell (HoT)
+	      "09017", // The Hightower (HoT)
+	      "09051", // Trade Routes (HoT)
+	      "10048", // Forced March (SoD)
+	      "10050", // Breaking Ties (SoD)
+	      "11012", // Nighttime Marauders (TSC)
+	      "11021", // Wyman Manderly (TMoW)
+	      "11030", // Bowels of Casterly Rock (TMoW)
+	      "11033", // Hizdahr zo Loraq (TMoW)
+	      "11034", // Meereen (TMoW)
+	      "11051", // Drowned God Fanatic (SoKL)
+	      "11061", // Meera Reed (MoD)
+	      "11070", // Clever Feint (MoD)
+	      "11074", // Meereenese Market (MoD)
+	      "11082", // Skagos (IDP)
+	      "11085", // Three-Finger Hobb (IDP)
+	      "11114", // Gifts for the Widow (DitD)
+	      "12002", // Euron Crow's Eye (KotI)
+	      "12029", // Desert Raider (KotI)
+	      "12045", // Sea of Blood (KotI)
+	      "12046", // We Take Westeros! (KotI)
+	      "12047", // Return to the Fields (KotI)
+	      "13034", // Shadow of the East (CoS)
+	      "13044", // Unexpected Guile (PoS)
+	      "13079", // Kingdom of Shadows (BtRK) 
+	      "13085", // Yoren (TB)
+	      "13086", // Bound for the Wall (TB)
+	      "13103", // The Queen's Retinue (LMHR)
+	      "13118", // Valyrian Steel (LMHR)
+	      "15017", // Womb of the World (DotE)
+	      "15046", // Fury of the Khalasar (DotE)
+	      "15050", // At the Palace of Sorrow (DotE)
+	      "16013", // Mad King Aerys (TTWDFL)
+	      "16027", // Aloof and Apart (TTWDFL)
         ],
         joust_pods = [
-            {
-                name: "P1",
-                restricted: "13085", // Yoren (TB)
-                cards: [
-                    "04026", // Craven (CtA)
-                    "11085", // Three-Finger Hobb (IDP)
-                ],
-            },
-            {
-                name: "P2",
-                restricted: "11051", // Drowned God Fanatic (SoKL)
-                cards: [
-                    "06011", // Drowned Disciple (AMAF)
-                ],
-            },
-            {
-                name: "P3",
-                restricted: "11114", // Gifts for the Widow (DitD)
-                cards: [
-                    "15001", // Daenerys Targaryen (DotE)
-                ]
-            },
-            {
-                name: "P4",
-                restricted: "09037", // Qotho (HoT)
-                cards: [
-                    "15017", // Womb of the World (DotE)
-                ]
-            },
-            {
-                name: "P5",
-                restricted: "09001", // Mace Tyrell (HoT)
-                cards: [
-                    "09017", // The Hightower (HoT)
-                ]
-            },
-            {
-                name: "P6",
-                restricted: "12029", // Desert Raider (KotI)
-                cards: [
-                    "06011", // Drowned Disciple (AMAF)
-                ]
-            },
-            {
-                name: "P7",
-                restricted: "11021", // Wyman Manderly (TMoW)
-                cards: [
-                    "11081", // Bear Island Scout (IDP)
-                    "11082", // Skagos (IDP)
-                ]
-            },
-            {
-                name: "P8",
-                restricted: "06040", // The Annals of Castle Black (GtR)
-                cards: [
-                    "06063", // Oldtown Informer (TRW)
-                    "06100", // Wheels Within Wheels (OR)
 
-                ]
-            },
         ],
         joust_banned_list = [
-            "03038", // To the Rose Banner! (WotN)
-            "04001", // The Dragon's Tail (AtSK)
-            "05010", // Taena Merryweather (LoCR)
-            "05049", // Littlefinger's Meddling (LoCR)
-            "11076", // A Mission in Essos (MoD)
-            "12045", // Sea of Blood (KotI)
-            "13079", // Kingdom of Shadows (BtRK)
-            "16001", // Ser Davos Seaworth (TTWDFL)
-            "16002", // Melisandre's Favor (TTWDFL)
-            "16003", // Wintertime Marauders (TTWDFL)
-            "16004", // Conquer (TTWDFL)
-            "16005", // Spider's Whisperer (TTWDFL)
-            "16006", // Wheels Within Wheels (TTWDFL)
-            "16007", // Prince's Loyalist (TTWDFL)
-            "16008", // You Murdered Her Children (TTWDFL)
-            "16009", // Samwell Tarly (TTWDFL)
-            "16010", // Old Bear Mormont (TTWDFL)
-            "16011", // Catelyn Stark (TTWDFL)
-            "16012", // Snow Castle (TTWDFL)
-            "16013", // Mad King Aerys (TTWDFL)
-            "16014", // The Hatchlings' Feast (TTWDFL)
-            "16015", // The Queen of Thorns (TTWDFL)
-            "16016", // Olenna's Study (TTWDFL)
-            "16017", // Littlefinger (TTWDFL)
-            "16018", // Vale Refugee (TTWDFL)
-            "16019", // High Ground (TTWDFL)
-            "16020", // King's Landing (TTWDFL)
-            "16021", // Harrenhal (TTWDFL)
-            "16022", // Sky Cell (TTWDFL)
-            "16023", // Heads on Pikes (TTWDFL)
-            "16024", // Narrow Escape (TTWDFL)
-            "16025", // Seductive Promise (TTWDFL)
-            "16026", // Westeros Bleeds (TTWDFL)
-            "16031", // Benjen's Cache (TTWDFL)
-            "16032", // Rioting (TTWDFL)
-            "16033", // Rule By Decree (TTWDFL)
-            "16034", // Search and Detain (TTWDFL)
-            "16035", // The Art of Seduction (TTWDFL)
-            "16036", // The Gathering Storm (TTWDFL)
+	      "03038", // To the Rose Banner! (WotN)
+	      "05010", // Taena Merryweather (LoCR)
+	      "05049", // Littlefinger's Meddling (LoCR)
+	      "06040", // The Annals of Castle Black (GtR)
+	      "11076", // A Mission in Essos (MoD)
+	      "16002", // Melisandre's Favor (TTWDFL)
+	      "16003", // Wintertime Marauders (TTWDFL)
+	      "16006", // Wheels Within Wheels (TTWDFL)
+	      "16008", // You Murdered Her Children (TTWDFL)
+	      "16009", // Samwell Tarly (TTWDFL)
+	      "16012", // Snow Castle (TTWDFL)
+	      "16014", // The Hatchlings' Feast (TTWDFL)
+	      "16015", // The Queen of Thorns (TTWDFL)
+	      "16017", // Littlefinger (TTWDFL)
+	      "16018", // Vale Refugee (TTWDFL)
+	      "16021", // Harrenhal (TTWDFL)
+	      "16022", // Sky Cell (TTWDFL)
+	      "16024", // Narrow Escape (TTWDFL)
+	      "16026", // Westeros Bleeds (TTWDFL)
+	      "16032", // Rioting (TTWDFL)
+	      "16034", // Search and Detain (TTWDFL)
+	      "16035", // The Art of Seduction (TTWDFL)
+	      "16036", // The Gathering Storm (TTWDFL)
         ],
         melee_restricted_list = [
             "01001", // A Clash of Kings (Core)

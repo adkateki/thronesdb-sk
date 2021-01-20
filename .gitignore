@@ -37,3 +37,6 @@
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
+*.tar.gz
+throneteki-json*
+migrations
